@@ -14,7 +14,7 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "baseUrl": ".",
-    "paths": { "@components/*": ["components/*"] }
+    "paths": { "@components/*": ["components/*"], "@images/*": ["images/*"] }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "next.config.js"],
   "exclude": ["node_modules"]
