@@ -7,7 +7,7 @@ export const SearchBar = () => {
       <input
         type='text'
         placeholder='Start Your Search'
-        className='flex-grow pl-5 bg-transparent text-sm text-gray-600 placeholder-gray-400'
+        className='flex-grow pl-5 bg-transparent text-sm text-gray-600 placeholder-gray-400 focus:outline-none'
       />
       <SearchIcon className='hidden md:inline-flex h-8 bg-red-400 text-white rounded-full p-1 cursor-pointer md:mx-2' />
     </div>
