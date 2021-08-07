@@ -18,7 +18,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
 export default function Home ({ exploreData, cardsData }) {
   return (
-    <div className=' scrollbar-hide mb-20'>
+    <div className=' scrollbar-hide'>
       <Head>
         <title>Airbnb w/Nextjs & Tailwind-CSS</title>
         <link rel='icon' href='/favicon.ico' />
