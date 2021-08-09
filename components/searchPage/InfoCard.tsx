@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import { InfoCardProps } from '.';
+import { InfoCardProps } from '../../pages/search';
 import { HeartIcon, StarIcon } from '@heroicons/react/outline';
 
 export const InfoCard = ({

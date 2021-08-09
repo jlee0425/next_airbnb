@@ -1,5 +1,5 @@
+import { InfoCardProps } from 'pages/search';
 import React from 'react';
-import { InfoCardProps } from '.';
 import { InfoCard } from './InfoCard';
 
 interface Props {
