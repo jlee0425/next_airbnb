@@ -4,6 +4,7 @@ import { DateRangePicker, RangeWithKey } from 'react-date-range';
 import 'react-date-range/dist/styles.css';
 import 'react-date-range/dist/theme/default.css';
 import { SearchBarGuests } from './SearchBarGuests';
+import { SearchButtons } from './SearchButtons';
 
 export const SearchCalendar = () => {
   const { selectedDates, setSelectedDates } = useSelectDates();
@@ -26,6 +27,7 @@ export const SearchCalendar = () => {
         rangeColors={['#FD5B61']}
       />
       <SearchBarGuests />
+      <SearchButtons />
     </div>
   );
 };
