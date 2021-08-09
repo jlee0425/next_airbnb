@@ -1,11 +1,11 @@
 import Layout from '@components/Layout';
+import { OptionSection } from '@components/searchPage/OptionSection';
+import { SearchList } from '@components/searchPage/SearchList';
 import { fetcher } from '@utils/fetcher';
 import { format } from 'date-fns';
 import { usePlaceholder } from 'hooks/usePlaceholder';
 import { useRouter } from 'next/router';
 import React, { useEffect } from 'react';
-import { OptionSection } from './OptionSection';
-import { SearchList } from './SearchList';
 
 export interface InfoCardProps {
   img: string;
