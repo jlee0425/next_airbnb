@@ -1,10 +1,8 @@
-import { GetStaticProps } from 'next';
-import Head from 'next/head';
-import React from 'react';
 import Body from '@components/Body';
-import Footer from '@components/Footer';
-import Header from '@components/Header';
 import Hero from '@components/Hero';
+import Layout from '@components/Layout';
+import { GetStaticProps } from 'next';
+import React from 'react';
 import { fetcher } from 'utils/fetcher';
 
 export const getStaticProps: GetStaticProps = async () => {
@@ -18,15 +16,9 @@ export const getStaticProps: GetStaticProps = async () => {
 
 export default function Home ({ exploreData, cardsData }) {
   return (
-    <div className=' scrollbar-hide'>
-      <Head>
-        <title>Airbnb w/Nextjs & Tailwind-CSS</title>
-        <link rel='icon' href='/favicon.ico' />
-      </Head>
-      <Header />
+    <Layout>
       <Hero />
       <Body exploreData={exploreData} cardsData={cardsData} />
-      <Footer />
-    </div>
+    </Layout>
   );
 }
