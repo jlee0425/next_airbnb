@@ -1,4 +1,5 @@
 import Layout from '@components/Layout';
+import { Map } from '@components/Map';
 import { OptionSection } from '@components/searchPage/OptionSection';
 import { SearchList } from '@components/searchPage/SearchList';
 import { fetcher } from '@utils/fetcher';
@@ -19,11 +20,13 @@ export interface InfoCardProps {
   lat: number;
 }
 
-interface Props {
+export interface Props {
   searchResults: InfoCardProps[];
 }
 export const getServerSideProps = async () => {
-  const searchResults = await fetcher('https://links.papareact.com/isz');
+  const searchResults = await fetcher<InfoCardProps[]>(
+    'https://links.papareact.com/isz'
+  );
 
   return {
     props: {
@@ -49,13 +52,18 @@ const index = ({ searchResults }: Props) => {
   return (
     <Layout>
       <div className='flex'>
-        <OptionSection
-          range={range}
-          numGuests={numGuests}
-          location={location}
-        />
+        <div>
+          <OptionSection
+            range={range}
+            numGuests={numGuests}
+            location={location}
+          />
+          <SearchList searchList={searchResults} />
+        </div>
+        <section className='hidden xl:inline-flex xl:min-w-[600px]'>
+          <Map searchResults={searchResults} />
+        </section>
       </div>
-      <SearchList searchList={searchResults} />
     </Layout>
   );
 };
