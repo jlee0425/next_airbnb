@@ -8,7 +8,7 @@ interface Props {
 
 export const SearchList = ({ searchList }: Props) => {
   return (
-    <div className='flex flex-col flex-1 overflow-y-scroll'>
+    <div className='flex flex-col flex-1 overflow-y-scroll no-scrollbar'>
       {searchList.map(
         ({
           img,

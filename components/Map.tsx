@@ -45,8 +45,8 @@ export const Map = ({ searchResults }: Props) => {
     <ReactMapGL
       mapStyle='mapbox://styles/jaccree/cksadyzysak7817p61u4h8w1e'
       mapboxApiAccessToken={
-        process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN ||
-        process.env.MAPBOX_ACCESS_TOKEN
+        process.env.MAPBOX_ACCESS_TOKEN ||
+        process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN
       }
       {...viewport}
       onViewportChange={handleViewportChange}
