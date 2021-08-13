@@ -11,7 +11,7 @@ interface Props {
 
 const index = ({ children }: Props) => {
   return (
-    <>
+    <div className='flex flex-col h-screen'>
       <Head>
         <title>Airbnb w/Nextjs & Tailwind-CSS</title>
         <link rel='icon' href='/favicon.ico' />
@@ -19,7 +19,7 @@ const index = ({ children }: Props) => {
       <Header />
       <main>{children}</main>
       <Footer />
-    </>
+    </div>
   );
 };
 

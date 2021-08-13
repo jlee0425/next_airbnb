@@ -51,8 +51,8 @@ const index = ({ searchResults }: Props) => {
 
   return (
     <Layout>
-      <div className='flex'>
-        <div>
+      <div className='flex h-screen'>
+        <div className='flex flex-col overflow-hidden'>
           <OptionSection
             range={range}
             numGuests={numGuests}
@@ -60,7 +60,7 @@ const index = ({ searchResults }: Props) => {
           />
           <SearchList searchList={searchResults} />
         </div>
-        <section className='hidden xl:inline-flex xl:min-w-[600px]'>
+        <section className='hidden xl:inline-flex xl:min-w-[600px] xl:w-1/2'>
           <Map searchResults={searchResults} />
         </section>
       </div>

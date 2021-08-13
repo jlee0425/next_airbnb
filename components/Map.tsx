@@ -19,7 +19,7 @@ export const Map = ({ searchResults }: Props) => {
 
   const [viewport, setViewport] = useState({
     width: '100%',
-    height: '100%',
+    height: '100vh',
     latitude: centerPoint.latitude,
     longitude: centerPoint.longitude,
     zoom: 11
@@ -44,7 +44,10 @@ export const Map = ({ searchResults }: Props) => {
   return (
     <ReactMapGL
       mapStyle='mapbox://styles/jaccree/cksadyzysak7817p61u4h8w1e'
-      mapboxApiAccessToken={process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN}
+      mapboxApiAccessToken={
+        process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN ||
+        process.env.MAPBOX_ACCESS_TOKEN
+      }
       {...viewport}
       onViewportChange={handleViewportChange}
     >

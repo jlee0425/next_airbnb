@@ -2,7 +2,7 @@ import React from 'react';
 
 export const OptionSection = ({ range, numGuests, location }) => {
   return (
-    <section className='flex-grow pt-14 px-6'>
+    <section className='pt-14 px-6'>
       <p>
         300+ Stays | {range} | {numGuests} Guests
       </p>
